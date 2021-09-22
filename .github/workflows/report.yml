@@ -28,5 +28,6 @@ jobs:
       env:
         STUID: ${{ secrets.Stuid }}
         PASSWORD: ${{ secrets.Password }}
+        JINJI: ${{ secrets.Jinji }}
       run: |
-        python report.py data.json "$STUID" "$PASSWORD"
+        python report.py data.json "$STUID" "$PASSWORD" "$JINJI"
