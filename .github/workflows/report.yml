@@ -30,5 +30,6 @@ jobs:
         STUID: ${{ secrets.Stuid }}
         PASSWORD: ${{ secrets.Password }}
         JINJI: ${{ secrets.Jinji }}
+        BARK: ${{ secrets.Bark }}
       run: |
         python report.py data.json "$STUID" "$PASSWORD" "$JINJI"
