@@ -8,6 +8,8 @@ import re
 import sys
 import argparse
 from bs4 import BeautifulSoup
+from random import randint
+from time import sleep
 
 class Report(object):
     def __init__(self, stuid, password, data_path, jinji):
@@ -100,7 +102,10 @@ class Report(object):
         session.post(url, data=data)
         print("login...")
         return session
-
+    
+randomDelay = randint(10,3600)
+print("随机延迟秒数：" + randomDelay)
+sleep(randomDelay)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='URC nCov auto report script.')
