@@ -104,7 +104,7 @@ class Report(object):
         return session
     
 randomDelay = randint(10,3600)
-print("随机延迟秒数：" + randomDelay)
+print("随机延迟秒数：" + str(randomDelay))
 sleep(randomDelay)
 
 if __name__ == "__main__":
